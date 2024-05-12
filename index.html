@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let divElement = document.createElement("div");
+      let pElement = document.createElement("p");
+      pElement.classList.add("text");
+      pElement.textContent = "Hello world!";
+      divElement.appendChild(pElement);
+      document.body.appendChild(divElement);
+    </script>
+    <ul id="arrayList"></ul>
+
+    <script>
+      const array = [
+        "მასივის ელემენტი",
+        "მასივის ელემენტი",
+        "მასივის ელემენტი",
+        "მასივის ელემენტი",
+        "მასივის ელემენტი",
+      ];
+      const ulElement = document.getElementById("arrayList");
+      array.forEach((element) => {
+        const liElement = document.createElement("li");
+        liElement.textContent = element;
+        ulElement.appendChild(liElement);
+      });
+    </script>
+  </body>
+</html>
